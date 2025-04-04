@@ -151,7 +151,7 @@ file:///C:/Windows/System32/calc.exe
 ```
 
 #### example of a multi chained csv on multiple cells
-![csvi-chained-example](images-examples/chained-csvi-example.png.png)
+![csvi-chained-example](https://github.com/thiem-dev/xssCat/blob/main/MyPayloadAll/images-examples/chained-csvi-example.png?raw=true)
 
 ---
 
