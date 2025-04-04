@@ -179,3 +179,6 @@ cmd|'/C calc'!A0,?
 - [HackTricks: CSV/Excel Injection](https://book.hacktricks.xyz/pentesting-web/formula-csv-doc-latex-ghostscript-injection)
 
 ---
+
+## example of a multi chained csv on multiple cells
+![image.png](attachment:db3b9314-02f1-4e79-ba80-c40a85dbb413:image.png)
